@@ -14,7 +14,7 @@ contract PriceConverter {
      * Address: 0x9326BFA02ADD2366b30bacB125260Af641031331
      */
     constructor() {
-        priceFeed = AggregatorV3Interface(0x9326BFA02ADD2366b30bacB125260Af641031331);
+        priceFeed = AggregatorV3Interface(0x9326BFA02ADD2366b30bacB125260Af641031331); // kovan testnet address from chainlink data feeds
     }
 
     /**
