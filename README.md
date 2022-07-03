@@ -5,7 +5,7 @@
 ```
 AggregatorV3Interface.sol
 ```
-*AggregatorV3Interface is an interface (technically non-, but technically not non-) contract, which actually gets the information from the real world about the ETH price.*
+*AggregatorV3Interface is an interface (kind of? is this right hahahahaha =>) contract, which actually gets the information from the real world about the ETH price.*
 
 ```
 getLatestPrice()
