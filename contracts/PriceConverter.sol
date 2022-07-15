@@ -9,25 +9,22 @@ contract PriceConverter {
     AggregatorV3Interface internal priceFeed;
 
     /**
+     * Oracle: Chainlink
      * Network: Kovan
      * Aggregator: ETH/USD
      * Address: 0x9326BFA02ADD2366b30bacB125260Af641031331
      */
     constructor() {
-        priceFeed = AggregatorV3Interface(0x9326BFA02ADD2366b30bacB125260Af641031331); // address from chainlink data feeds
+        priceFeed = AggregatorV3Interface(0x9326BFA02ADD2366b30bacB125260Af641031331);
     }
 
-    /**
-     * Returns the latest price
-     */
-    function getLatestPrice() external view returns (int256) {
+    function getLatestPrice() external view returns (int256 price) {
         (
             /*uint80 roundID*/,
-            int256 price,
+            price,
             /*uint256 startedAt*/,
             /*uint256 timeStamp*/,
             /*uint80 answeredInRound*/
         ) = priceFeed.latestRoundData();
-        return price;
     }
 }
