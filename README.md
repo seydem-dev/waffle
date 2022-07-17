@@ -5,9 +5,9 @@
 ```
 AggregatorV3Interface.sol
 ```
-*AggregatorV3Interface is an interface (contract, kind of? i think this is somewhat correct hahahahaha), which helps to get the information from the real world about the ETH price.*
+*AggregatorV3Interface is an interface which helps to get information from the real world about the ETH price.*
 
 ```
 getLatestPrice()
 ```
-*Function which returns current ETH price in USD (WEI).*
+*Function which returns current ETH price in USD.*
