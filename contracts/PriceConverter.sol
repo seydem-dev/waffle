@@ -6,7 +6,7 @@ import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 
 contract PriceConverter {
 
-    AggregatorV3Interface internal priceFeed;
+    AggregatorV3Interface internal immutable priceFeed;
 
     /**
      * Oracle: Chainlink
@@ -19,12 +19,6 @@ contract PriceConverter {
     }
 
     function getLatestPrice() external view returns (int256 price) {
-        (
-            /*uint80 roundID*/,
-            price,
-            /*uint256 startedAt*/,
-            /*uint256 timeStamp*/,
-            /*uint80 answeredInRound*/
-        ) = priceFeed.latestRoundData();
+        (/*uint80 roundID*/, price, /*uint256 startedAt*/, /*uint256 timeStamp*/, /*uint80 answeredInRound*/) = priceFeed.latestRoundData();
     }
 }
