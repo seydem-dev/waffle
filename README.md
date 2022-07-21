@@ -1,6 +1,5 @@
 # ETH to USD Price Conversion
-
-**With Price Converter you can retrieve the latest price of ETH in USD (in WEI, only look at the first 4 digits, maybe the first 6 if you want decimals too), which are provided by the amazing Chainlink oracles.**
+**With Price Converter you can retrieve the latest price of ETH in USD in WEI (only look at the first 4 digits, maybe the first 6 if you want decimals too), which are provided by the AMAZING Chainlink oracles.**
 
 ```
 AggregatorV3Interface.sol
@@ -10,4 +9,4 @@ AggregatorV3Interface.sol
 ```
 getLatestPrice()
 ```
-*Function which returns current ETH price in USD.*
+*Returns current ETH price in USD.*
