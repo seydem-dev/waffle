@@ -6,7 +6,7 @@ import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 
 contract EthToUsdConversion {
 
-    AggregatorV3Interface internal constant priceFeed = AggregatorV3Interface(0x9326BFA02ADD2366b30bacB125260Af641031331);
+    AggregatorV3Interface private constant _priceFeed = AggregatorV3Interface(0x9326BFA02ADD2366b30bacB125260Af641031331);
 
     /**
      * Oracle: Chainlink
@@ -16,6 +16,6 @@ contract EthToUsdConversion {
      */
 
     function getLatestPrice() external view returns (int256 price) {
-        (/*uint80 roundID*/, price, /*uint256 startedAt*/, /*uint256 timeStamp*/, /*uint80 answeredInRound*/) = priceFeed.latestRoundData();
+        (/*uint80 roundID*/, price, /*uint256 startedAt*/, /*uint256 timeStamp*/, /*uint80 answeredInRound*/) = _priceFeed.latestRoundData();
     }
 }
